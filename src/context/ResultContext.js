@@ -26,7 +26,16 @@ export const ResultProvider = ({children}) => {
         }
     ])
 
-    return <ResultContext.Provider value={{results}} >
+    //add farm
+    const addFarm = (newFarm) => {
+        console.log(newFarm)
+        setResults([...newFarm, ...results])
+    }
+
+    return <ResultContext.Provider value={{
+        results,
+        addFarm
+        }} >
     {children}
   </ResultContext.Provider>
   

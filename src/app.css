@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    background-color: rgb(157, 67, 241);
+    color: white;
+}
+
+.farmName {
+    width: 30%;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selections {
+    width: 30%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.farmList {
+    width: 60%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}

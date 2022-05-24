@@ -10,7 +10,7 @@ export default function ResultPanel() {
         return <p>No listings yet...</p>
     }
   return (
-    <div>
+    <div className="farmList">
         {results.map((result) => (
             <div>
                 <ResultItem key={result.id} farm={result} />
