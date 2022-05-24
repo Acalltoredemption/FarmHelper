@@ -34,9 +34,16 @@ export const ResultProvider = ({children}) => {
         setResults([newFarm, ...results])
     }
 
+    const deleteFarm = (id) => {
+        if(window.confirm('Are you sure you want to delete?')){
+            setResults(results.filter((farm) => farm.id !== id))
+        }
+    }
+
     return <ResultContext.Provider value={{
         results,
-        addFarm
+        addFarm,
+        deleteFarm
         }} >
     {children}
   </ResultContext.Provider>
