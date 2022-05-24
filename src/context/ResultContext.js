@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import {v4 as uuidv4} from 'uuid'
 
 const ResultContext = createContext()
 
@@ -28,8 +29,9 @@ export const ResultProvider = ({children}) => {
 
     //add farm
     const addFarm = (newFarm) => {
+        newFarm.id = uuidv4()
         console.log(newFarm)
-        setResults([...newFarm, ...results])
+        setResults([newFarm, ...results])
     }
 
     return <ResultContext.Provider value={{
