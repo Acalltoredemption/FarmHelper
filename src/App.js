@@ -1,22 +1,27 @@
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 import Header from "./components/Header";
-import Selections from "./components/Selections";
-import ResultPanel from "./components/ResultPanel";
 import { ResultProvider } from "./context/ResultContext";
 import './index.css'
-
 import './app.css'
+import Home from './pages/Home';
+import Calculator from './pages/Calculator';
+import About from './pages/About';
 
 function App() {
   return (
     
     <ResultProvider>
+      <Router>
+      <Header />
     <div className="min-h-screen px-6 py-8 mx-auto bg-gray-100">
-    <Header />
-    <section className="grid grid-cols-2 gap-4 mt-12">
-    <Selections />
-    <ResultPanel />
-    </section>
+      <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/calculator' element={<Calculator />} />
+      </Routes>
     </div>
+    </Router>
     </ResultProvider>
 
   );
