@@ -10,9 +10,9 @@ export default function ResultPanel() {
         return <p>No listings yet...</p>
     }
   return (
-    <div className="farmList">
+    <div className='w-8/12 mx-auto'>
         {results.map((result) => (
-            <div>
+            <div className="pt-8">
                 <ResultItem key={result.id} farm={result} />
             </div>
         ))}

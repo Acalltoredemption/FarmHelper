@@ -48,15 +48,15 @@ export default function Selections() {
         addFarm(newFarm)
     }
   return (
-      <>
-    <div className="farmName">
-    <label htmlFor="farmname">Farm Name:</label>
+      <div className="mx-auto">
+    <div>
+    <label htmlFor="farmname" className="text-2xl">Farm Name:</label>
     <input name="farmname" type="text" value={farmName} onChange={handleFarmName} placeholder="Farm Name" />
     </div>
 
-    <div className="selections">
+    <div className="pt-8">
         <form onSubmit={handleSubmit}>
-            <label htmlFor="cows">Cows:</label>
+            <label htmlFor="cows" className="text-lg">Cows:</label>
             <select onChange={countCows} name='cows'>
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -71,7 +71,7 @@ export default function Selections() {
                 <option value="10">10</option>
             </select>
 
-            <label htmlFor="goats">Goats:</label>
+            <label htmlFor="goats" className="lg">Goats:</label>
             <select onChange={countGoats} name='goats'>
             <option value="0">0</option>
                 <option value="1">1</option>
@@ -86,7 +86,7 @@ export default function Selections() {
                 <option value="10">10</option>
             </select>
 
-            <label htmlFor="sheep">Sheep:</label>
+            <label htmlFor="sheep" className="text-lg">Sheep:</label>
             <select onChange={countSheep} name='sheep'>
             <option value="0">0</option>
                 <option value="1">1</option>
@@ -101,7 +101,7 @@ export default function Selections() {
                 <option value="10">10</option>
             </select>
 
-            <label htmlFor="chickens">Chickens:</label>
+            <label htmlFor="chickens" className="text-lg">Chickens:</label>
             <select onChange={countChickens} name='chickens'>
             <option value="0">0</option>
                 <option value="1">1</option>
@@ -118,6 +118,6 @@ export default function Selections() {
             <button type='submit'>Submit new farm</button>
         </form>
     </div>
-    </>
+    </div>
   )
 }
