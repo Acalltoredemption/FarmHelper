@@ -7,6 +7,7 @@ import './app.css'
 import Home from './pages/Home';
 import Calculator from './pages/Calculator';
 import About from './pages/About';
+import GrowZones from './pages/GrowZones';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/calculator' element={<Calculator />} />
+      <Route path='/zones' element={<GrowZones />} />
       </Routes>
     </div>
     </Router>

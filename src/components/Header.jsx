@@ -37,6 +37,9 @@ export default function Header() {
       <Link to="/calculator" className={pathMatchRoute('/calculator') ? "block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white" : "block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"}>
         Calculator
       </Link>
+      <Link to="/zones" className={pathMatchRoute('/zones') ? "block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white" : "block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"}>
+        Grow Zones
+      </Link>
     </div>
   </div>
 </nav>
