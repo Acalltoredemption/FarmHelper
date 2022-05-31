@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 import ResultItem from './ResultItem'
 import ResultContext from '../context/ResultContext'
 import { useContext } from 'react'
@@ -13,7 +14,7 @@ export default function ResultPanel() {
     <div className='w-8/12 mx-auto'>
         {results.map((result) => (
             <div className="pt-8">
-                <ResultItem key={result.id} farm={result} />
+                <Card key={result.id} item={result} />
             </div>
         ))}
     </div>
