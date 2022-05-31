@@ -50,14 +50,19 @@ export default function Selections() {
   return (
       <div className="mx-auto">
     <div>
-    <label htmlFor="farmname" className="text-2xl">Farm Name:</label>
-    <input name="farmname" type="text" value={farmName} onChange={handleFarmName} placeholder="Farm Name" />
+    <label className="block mb-2 text-sm font-bold text-gray-700" for="farmname">
+        Username
+      </label>
+      <input onChange={handleFarmName} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={farmName} type="text" name="farmname" placeholder="Farm Name" />
     </div>
+
+
+    
 
     <div className="pt-8">
         <form onSubmit={handleSubmit}>
             <label htmlFor="cows" className="text-lg">Cows:</label>
-            <select onChange={countCows} name='cows'>
+            <select onChange={countCows} name='cows' class="border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -72,7 +77,7 @@ export default function Selections() {
             </select>
 
             <label htmlFor="goats" className="lg">Goats:</label>
-            <select onChange={countGoats} name='goats'>
+            <select onChange={countGoats} name='goats' class="border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none">
             <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -87,7 +92,7 @@ export default function Selections() {
             </select>
 
             <label htmlFor="sheep" className="text-lg">Sheep:</label>
-            <select onChange={countSheep} name='sheep'>
+            <select onChange={countSheep} name='sheep' class="border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none">
             <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -102,7 +107,7 @@ export default function Selections() {
             </select>
 
             <label htmlFor="chickens" className="text-lg">Chickens:</label>
-            <select onChange={countChickens} name='chickens'>
+            <select onChange={countChickens} name='chickens' class="border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none">
             <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -115,7 +120,7 @@ export default function Selections() {
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-            <button type='submit'>Submit new farm</button>
+            <button type='submit' className='px-4 py-2 mt-3 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline'>Submit new farm</button>
         </form>
     </div>
     </div>

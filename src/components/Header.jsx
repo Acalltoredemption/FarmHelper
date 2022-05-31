@@ -1,8 +1,16 @@
 import Tractor from '../assets/images/tractor.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 export default function Header() {
+  const location = useLocation()
+
+  const pathMatchRoute = (route) => {
+    if (route === location.pathname){
+      return true
+    }
+  }
+
   return (
 <nav className="flex flex-wrap items-center justify-between p-6 bg-teal-600">
   <div className="flex items-center flex-shrink-0 mr-6 text-white ">
@@ -20,13 +28,13 @@ export default function Header() {
   </div>
   <div className="flex-grow block w-full lg:flex lg:items-center lg:w-auto">
     <div className="text-sm lg:flex-grow">
-      <Link to="/" className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+      <Link to="/" className={pathMatchRoute('/') ? "block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white" : "block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"}>
         Home
       </Link>
-      <Link to="/about" className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+      <Link to="/about"  className={pathMatchRoute('/about') ? "block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white" : "block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"}>
         About
       </Link>
-      <Link to="/calculator" className="block mt-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+      <Link to="/calculator" className={pathMatchRoute('/calculator') ? "block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white" : "block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"}>
         Calculator
       </Link>
     </div>
