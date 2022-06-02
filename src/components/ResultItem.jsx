@@ -18,7 +18,7 @@ export default function ResultItem({farm}) {
             <li>{farm.counts.sheep} sheep</li>
             <li>{farm.counts.chickens} chickens</li>
 
-            <p className="mt-2 text-lg">You would need {acreCount} acres</p>
+            <p className="mt-2 text-lg">You would need {Math.round(acreCount)} acres</p>
             
             <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
